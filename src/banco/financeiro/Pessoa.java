@@ -6,31 +6,31 @@ public class Pessoa {
     protected String bairro;
     protected String endereco;
 
-    public String getDataNascimento() {
+    public String getDataNascimento(){
         return dataNascimento;
     }
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(String dataNascimento){
         this.dataNascimento = dataNascimento;
     }
 
-    public String getCidade() {
+    public String getCidade(){
         return cidade;
     }
-    public void setCidade(String cidade) {
+    public void setCidade(String cidade){
         this.cidade = cidade;
     }
 
-    public String getBairro() {
+    public String getBairro(){
         return bairro;
     }
-    public void setBairro(String bairro) {
+    public void setBairro(String bairro){
         this.bairro = bairro;
     }
 
-    public String getEndereco() {
+    public String getEndereco(){
         return endereco;
     }
-    public void setEndereco(String endereco) {
+    public void setEndereco(String endereco){
         this.endereco = endereco;
     }
     

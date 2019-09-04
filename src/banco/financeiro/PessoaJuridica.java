@@ -12,7 +12,7 @@ public class PessoaJuridica extends Pessoa {
         return this.NomeFantasia;
     }
     
-    public void RazaoSocial (String RazaoSocial){
+    public void setRazaoSocial (String RazaoSocial){
         this.RazaoSocial = RazaoSocial;
     }
     public String getrazaosocial(){

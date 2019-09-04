@@ -13,10 +13,12 @@ public class PessoaFisica extends Pessoa{
     public void setcpf (String cpf){
         this.CPF = cpf;
     }public String getcpf(){
-        return this.CPF;}
+        return this.CPF;
+    }
     
     public void setrg(String rg){
         this.RG = rg;
     }public String getrg(){
-        return this.RG;}
+        return this.RG;
+    }
 }

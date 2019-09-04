@@ -6,26 +6,41 @@ public class ContaCorrenteSimplificada {
     private double saldo;
     private String Dados;
     private Pessoa pessoa;
+    private Pessoa[] pessoas = new Pessoa[100];
+    private int qtd = 0;
+    
+    public boolean adicionar (Pessoa p){
+        if(qtd < 100){
+            pessoas[qtd] = p;
+            qtd++;
+            return true;
+        }
+        return false;
+    }
+            
+    
     public double depositar(double valor){
         this.saldo = this.saldo + valor;
         return this.saldo;
     }
     
     public void Status(){
+        
         System.out.println("AGENCIA: " + this.agencia);
         System.out.println("CONTA-CORRENTE: " + this.nroConta);
         
-            if(this.pessoa instanceof PessoaFisica){
-                System.out.println("NOME: " + ((PessoaFisica) this.pessoa).getnomecompleto());
-                System.out.println("RG: " + ((PessoaFisica) this.pessoa).getrg());
-                System.out.println("CPF: " + ((PessoaFisica) this.pessoa).getcpf());
-    }
-            if(this.pessoa instanceof PessoaJuridica){
-                System.out.println("NOME: " + ((PessoaJuridica) this.pessoa).getnomefantasia());
-                System.out.println("RG: " + ((PessoaJuridica) this.pessoa).getrazaosocial());
-                System.out.println("CPF: " + ((PessoaJuridica) this.pessoa).getCNPJ());
+        for (int i = 0; i < qtd; i++) {
+            if(this.pessoas[1] instanceof PessoaFisica){
+                System.out.println("NOME: " + ((PessoaFisica) this.pessoas[1]).getnomecompleto());
+                System.out.println("RG: " + ((PessoaFisica) this.pessoas[1]).getrg());
+                System.out.println("CPF: " + ((PessoaFisica) this.pessoas[1]).getcpf());
             }
-            
+            if(this.pessoas[1] instanceof PessoaJuridica){
+                System.out.println("NOME: " + ((PessoaJuridica) this.pessoas[1]).getnomefantasia());
+                System.out.println("RG: " + ((PessoaJuridica) this.pessoas[1]).getrazaosocial());
+                System.out.println("CPF: " + ((PessoaJuridica) this.pessoas[1]).getCNPJ());
+            }
+        }   
         System.out.println("SALDO: " + this.saldo);
     }
     
